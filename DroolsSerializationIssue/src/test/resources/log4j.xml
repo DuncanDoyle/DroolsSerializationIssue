@@ -10,7 +10,10 @@
   </appender>
 
   <!-- Loggers -->
- 
+  <logger name="org.drools">
+    <level value="DEBUG" />
+  </logger>
+
   <root>
     <priority value="INFO" />
     <appender-ref ref="CONSOLE" />
