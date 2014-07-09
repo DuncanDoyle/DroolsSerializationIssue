@@ -1,0 +1,17 @@
+package org.jboss.ddoyle.drools.rules
+
+import org.jboss.ddoyle.drools.model.SimpleEvent
+
+declare SimpleEvent
+    @role( event )
+    @timestamp( timestamp )
+    @expires( 10d )
+    @propertyReactive
+end
+
+rule "SIMPLE_FACT_FINDER_RULE"
+    when
+        $s: SimpleEvent()
+    then
+		System.out.println("Found a simple fact.");
+end
